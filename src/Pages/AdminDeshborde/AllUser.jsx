@@ -51,16 +51,14 @@ const AllUser = () => {
           </div>
           <div className="overflow-x-auto mt-8 rounded-xl ">
             <table className="table bg-yellow-100">
-              {/* head */}
               <thead>
                 <tr className="bg-blue-300 text-black font-bold text-16 m-2">
                   <th>NO</th>
+                  <th>Name</th>
                   <th>Citizen</th>
                   <th>Document No</th>
-                  <th>Last Pass <br /> Due Date </th>
                   <th>Current Pass Type</th>
-                  <th>Renewal Pass <br /> Duration <br />(Month )</th>
-                  <th>Current Pass <br /> Due Date</th>
+                  <th>Duration Month</th>
                   <th>Current Visa Type</th>
                   <th>Application Status </th>
                   <th>Action</th>

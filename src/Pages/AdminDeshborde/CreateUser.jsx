@@ -4,37 +4,24 @@ const CreateUser = () => {
   const [selectedStatus, setSelectedBrand] = useState("");
   const handleAddProduct = (event) => {
     event.preventDefault();
-    {
-      /* name
-        citizen
-documentNo
-lastPass
-currentPassType
-renewalPass
-currentPassDue
-currentVisaType
-Application Status 
-pdf */
-    }
+
     const form = event.target;
     const name = form.name.value;
     const citizen = form.citizen.value;
     const documentNo = form.documentNo.value;
-    const lastPass = form.lastPass.value;
     const currentPassType = form.currentPassType.value;
+    const durationMonth = form.durationMonth.value;
     const currentVisaType = form.currentVisaType.value;
-    const brandName = selectedStatus;
-    const pdf = form.pdf.value;
+    const applicationStatus = selectedStatus;
 
     const myUsers = {
       name,
       citizen,
       documentNo,
-      lastPass,
       currentPassType,
+      durationMonth,
       currentVisaType,
-      brandName,
-      pdf,
+      applicationStatus,
     };
     console.log(myUsers);
   };
@@ -93,24 +80,6 @@ pdf */
             <div className="form-control md:w-1/2 md:ml-4 mt-8 md:mt-0">
               <label className="label">
                 <span className="label-text font-semibold">
-                  Last Pass Due Date
-                </span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="date"
-                  name="lastPass"
-                  placeholder="Last Pass Due Date"
-                  className="input input-bordered w-full"
-                />
-              </label>
-            </div>
-          </div>
-
-          <div className="md:flex mb-8">
-            <div className="form-control md:w-1/2">
-              <label className="label">
-                <span className="label-text font-semibold">
                   Current Pass Type{" "}
                 </span>
               </label>
@@ -123,35 +92,18 @@ pdf */
                 />
               </label>
             </div>
-            <div className="form-control md:w-1/2 md:ml-4 mt-8 md:mt-0">
+          </div>
+
+          <div className="md:flex mb-8">
+            <div className="form-control md:w-1/2 ">
               <label className="label">
-                <span className="label-text font-semibold">
-                  Renewal Pass Duration(Month )
-                </span>
+                <span className="label-text font-semibold">Duration Month</span>
               </label>
               <label className="input-group">
                 <input
                   type="number"
-                  name="renewalPass"
-                  placeholder="Renewal Pass Duration"
-                  className="input input-bordered w-full"
-                />
-              </label>
-            </div>
-          </div>
-
-          <div className="md:flex mb-8">
-            <div className="form-control md:w-1/2">
-              <label className="label">
-                <span className="label-text font-semibold">
-                  Current Pass Due Date{" "}
-                </span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="date"
-                  name="currentPassDue"
-                  placeholder="Current Pass Due Date"
+                  name="durationMonth"
+                  placeholder="Duration Month"
                   className="input input-bordered w-full"
                 />
               </label>
@@ -192,19 +144,6 @@ pdf */
                   <option value="PRINT">PRINT</option>
                   <option value="PAY">PAY</option>
                 </select>
-              </label>
-            </div>
-            <div className="form-control md:w-1/2 md:ml-4 mt-8 md:mt-0">
-              <label className="label">
-                <span className="label-text font-semibold">PDF Formate</span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="link"
-                  name="pdf"
-                  placeholder="Enter PDF link"
-                  className="input input-bordered w-full"
-                />
               </label>
             </div>
           </div>
